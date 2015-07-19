@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <PreferenceCategory android:title="@string/prefer_unit" >
+         <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="prefDistanceUnit"
+            android:summary="@string/prefer_unit_summary"
+            android:title="@string/prefer_unit_title" >
+        </CheckBoxPreference>
+        
+         <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="prefHyperMode"
+            android:summary="@string/prefer_hypermode_summary"
+            android:title="@string/prefer_hypermode_title" >
+        </CheckBoxPreference>
+        
+        <Preference
+            android:defaultValue="false"
+            android:key="prefClearCache"
+            android:title="@string/prefer_clear_cache" >
+        </Preference>
+        
+        <Preference
+            android:defaultValue="false"
+            android:key="prefTutorial"
+            android:title="@string/prefer_tutorial" >
+        </Preference>
+        
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="@string/prefer_social" >
+       <CheckBoxPreference
+            android:key="prefTwitter"
+            android:title="@string/prefer_twitter_title"
+            android:defaultValue="false"
+            android:summaryOn="@string/prefer_twitter_sum_on"
+            android:summaryOff="@string/prefer_twitter_sum_off"/>
+       
+       <CheckBoxPreference
+            android:key="prefFacebook"
+            android:title="@string/prefer_facebook_title"
+            android:defaultValue="false"
+            android:summaryOn="@string/prefer_twitter_sum_on"
+            android:summaryOff="@string/prefer_twitter_sum_off"/>
+       
+    </PreferenceCategory>  
+</PreferenceScreen>

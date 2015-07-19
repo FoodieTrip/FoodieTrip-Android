@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item 
+        android:id="@+id/register_menuButton"
+        android:icon="@drawable/ic_action_send_now"
+        android:title="@string/menu_register"
+        android:orderInCategory="2"
+        android:showAsAction="ifRoom|withText"/>
+    
+    <item 
+        android:id="@+id/register_cancelButton"
+        android:icon="@drawable/ic_action_cancel"
+        android:title="@string/menu_cancel"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom|withText"/>
+</menu>

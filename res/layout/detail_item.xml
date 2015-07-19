@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:id="@+id/detail_mainProgressbar"
+            style="?android:attr/progressBarStyleLargeInverse"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    <!-- Main Layout -->
+    <LinearLayout
+        android:id="@+id/detail_mainLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="18dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/detailItem_times_head"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/txt_detailTimes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#77bbff"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="@string/detailItem_times"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_detail_Mes"
+            android:text="@string/add_aMessage_goMesPage"
+            android:layout_gravity="right"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- 圖片功能區 -->
+
+        <ProgressBar
+            android:id="@+id/Detail_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:visibility="gone" />
+
+        <HorizontalScrollView
+            android:id="@+id/Detail_horizontalScrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="ifContentScrolls"
+            android:layout_gravity="left"
+            android:layout_marginTop="8dp"
+            android:background="#85000000"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id="@+id/Detail_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/add_Photo"
+                    android:scaleType="fitCenter"
+                    android:layout_width="123dp"
+                    android:layout_height="220dp"
+                    android:padding="8dp"
+                    android:src="@drawable/add_photo" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <RatingBar
+            android:id="@+id/Detail_rating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_gravity="right"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/Detail_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:maxLines="3"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <!-- 營業小幫手 -->
+
+        <TextView
+            android:id="@+id/txt_storeOpened"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/detail_corner"
+            android:text="@string/detailItem_opend"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_storeClosed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/detail_corner_close"
+            android:text="@string/detailItem_closed"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_warningTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_action_warning"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#ff0000"
+            android:text=""
+            android:visibility="gone" />
+
+        <!-- 外帶,外送提示 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="6dp"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txt_toDeli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/detail_corner"
+                android:text="@string/ItemP3_canDelivery"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_togo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/detail_corner"
+                android:text="@string/ItemP3_canToGo"
+                android:visibility="gone" />
+        </LinearLayout>
+        <!-- 其他提醒 -->
+
+        <TextView
+            android:id="@+id/textView_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:background="#acd6ff"
+            android:text="@string/store_address"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/textView_detail_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:text=""
+            android:textSize="19sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:background="#acd6ff"
+            android:text="@string/detailItem_restDays"
+            android:textSize="19sp" />
+
+        <LinearLayout
+            android:id="@+id/detail_restDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView_detail_memoTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:background="#acd6ff"
+            android:text="@string/Item_memo"
+            android:textSize="19sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textView_detail_memo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:text=""
+            android:textSize="19sp"
+            android:visibility="gone" />
+
+        <!-- 功能按鈕區 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_detail_mail"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_action_email"
+                android:text="@string/detailItem_mailStore"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_detail_web"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_action_web_site"
+                android:text="@string/detailItem_webStore"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_detail_dial"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_action_call"
+                android:text="@string/detailItem_callStore"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+  </LinearLayout>
+</ScrollView>

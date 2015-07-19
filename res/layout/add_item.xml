@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top|left" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginLeft="8dp"
+        android:gravity="top"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/store_name"
+            android:textSize="19sp" />
+
+        <EditText
+            android:id="@+id/editText_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:hint="@string/ItemP1_sNameHint" >
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/store_tags"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/addItem_current_Bigtag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#3366FF"
+            android:text="@string/Tag_select_help" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:overScrollMode="always" >
+
+            <LinearLayout
+                android:id="@+id/additem_BigTagsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/addItem_warning_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text=""
+            android:textColor="#ff8000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:overScrollMode="always"
+            android:layout_marginTop="10dp" >
+
+            <TableLayout
+                android:id="@+id/additem_SmallTagsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </TableLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/textView_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/store_address"
+            android:textSize="19sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sampleAddress" />
+
+            <TextView
+                android:id="@+id/addItem_address_sample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#00A9E1" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editText_county"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/ItemP1_addressCounty"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/editText_township"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/ItemP1_addressTownship"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/editText_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:ems="10"
+            android:hint="@string/ItemP1_addressLast"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:lines="3" />
+    </LinearLayout>
+
+</ScrollView>

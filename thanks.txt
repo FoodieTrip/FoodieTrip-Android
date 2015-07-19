@@ -1,0 +1,8 @@
+JakeWharton [ActionBarSherlock] [ViewPagerIndicator]
+Jeremy Feinstein [SlidingMenu]
+Kevin Gaudin [ACRA]
+biboune&edisonw [DateTimePicker]
+chrisbanes [ActionBar-PullToRefresh]
+Arnaud Vallat[Android-ScrollBarPanel]
+Justin Schultz [android-lightbox]
+Jeff Gilfelt [Android Action Bar Style Generator]

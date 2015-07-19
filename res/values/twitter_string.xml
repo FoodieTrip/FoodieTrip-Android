@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="twitter_consumer_key">fZryurUVu1hgyVt1dIxmA</string>
+    <string name="twitter_consumer_secret">6lAvImGRBJA2cDyfmA6wsT8203ybNbTeAcUpPZmI</string>
+    <string name="preference_name">twitter_oauth</string>
+    <string name="pref_key_oauth_token">oauth_token</string>
+    <string name="pref_key_oauth_secret">oauth_token_secret</string>
+    <string name="pref_key_twitter_login">isTwitterLogedIn</string>
+    <string name="twitter_callback_url">oauth://t4jsample</string>
+    <string name="url_twitter_auth">auth_url</string>
+    <string name="url_twitter_oauth_verifier">oauth_verifier</string>
+    <string name="url_twitter_oauth_token">oauth_token</string>
+    <string name="twitPic_api_key">ba412cc68f91c57db9db1a227dfb58b0</string>
+
+</resources>

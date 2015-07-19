@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <!-- 營業區 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <!-- id -->
+        <TextView
+            android:id="@+id/listViewRow_sid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/listViewRow_closed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_gravity="bottom"
+            android:padding="1dp"
+            android:src="@drawable/circle"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/listViewRow_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_gravity="bottom"
+            android:padding="1dp"
+            android:src="@drawable/circle_open"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/listViewRow_NotYet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_gravity="bottom"
+            android:padding="1dp"
+            android:src="@drawable/circle_yet"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <!-- 下方功能區 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:orientation="horizontal" >
+
+        <!-- 圖片 -->
+        <ImageView
+            android:id="@+id/listViewRow_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/border"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:padding="1dip"
+            android:src="@drawable/abs__toast_frame"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/listViewRow_progressBar"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- 第二層 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/listViewRow_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:gravity="left|bottom"
+                android:textColor="#ff0000"
+                android:text=""
+                android:textSize="19sp"
+                android:visibility="gone" />
+
+            <!-- 姓名標籤 -->
+
+            <TextView
+                android:id="@+id/listViewRow_sName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:scrollHorizontally="true"
+                android:fadingEdge="horizontal"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:text=""
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- 評分 -->
+            <RatingBar
+                android:id="@+id/listViewRow_rating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- 大標籤, 小標籤 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/listViewRow_bigTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/big_tags"
+                    android:text=""
+                    android:textColor="#9dceff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/listViewRow_smallTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dp"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="#004d99"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="6dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dp"
+                    android:text="@string/listItem_distances"
+                    android:textColor="#ff8000"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/listViewRow_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dp"
+                    android:text=""
+                    android:textColor="#ffb940"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

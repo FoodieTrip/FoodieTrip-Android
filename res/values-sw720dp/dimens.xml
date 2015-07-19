@@ -1,0 +1,7 @@
+<resources>
+
+    <dimen name="activity_horizontal_margin">128dp</dimen>
+    <dimen name="shadowUse">16dp</dimen>
+    <dimen name="sidebarUse">470dp</dimen>
+
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.foodietrip.android"
+    android:versionCode="18"
+    android:versionName="0.3"
+    android:installLocation="auto" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="16" />
+    <!-- 寫入外部儲存裝置授權 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 振動 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 網路授權 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- GPS授權 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 允許應用程式透過Wifi或3G網路來定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- Google Map V2 用的權限 -->
+    <permission android:name="com.foodietrip.android.permission.MAP_RECEIVE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.foodietrip.android.permission.MAP_RECEIVE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <!-- 使用OpenGL2 來顯示 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".CrashReport"
+        android:theme="@style/Theme.Myfivetry">
+        <activity
+            android:name=".splash"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    <!-- 其他Activity -->
+    <!-- windowSoftInputMode修正虛擬鍵盤遮住的問題，configChanges修正Fragment轉向會OverLay的問題 -->
+    <activity android:name=".EditItem_tab" android:label="@string/editItem_tab" android:windowSoftInputMode="stateHidden|adjustPan" android:configChanges="keyboardHidden|screenLayout|orientation|screenSize"></activity>
+    <activity android:name=".AddItem_tab" android:label="@string/addItem_tab" android:windowSoftInputMode="stateHidden|adjustPan" android:configChanges="keyboardHidden|screenLayout|orientation|screenSize"></activity>
+    <activity android:name=".DetailItem" android:label="@string/detailItem" android:uiOptions="splitActionBarWhenNarrow" android:configChanges="keyboardHidden|screenLayout|orientation|screenSize"></activity>
+    <activity android:name=".About" android:label="@string/about"></activity>
+    <activity android:name=".Setting" android:label="@string/setting"></activity>
+    <activity android:name=".ItemList" android:label="@string/app_name" android:uiOptions="splitActionBarWhenNarrow" android:configChanges="orientation"></activity>
+    <activity android:name=".LoginActivity" android:label="@string/loginActivity" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+    <activity android:name=".RegisterActivity" android:label="@string/registerActivity" android:windowSoftInputMode="stateHidden|adjustPan"></activity>
+    <activity android:name=".MapInterface" android:label="@string/mapInterface"></activity>
+    <activity android:name=".MapDragger" android:label="@string/mapDragger"></activity>
+    <activity android:name=".Message" android:label="@string/Message" android:configChanges="orientation"></activity>
+    <activity android:name=".Report" android:label="@string/reportError"></activity>
+    <activity android:name=".RegisterPhoneCheck" android:label="@string/registerPage1"></activity>
+    <activity android:name=".LoginToTwitter" android:label="@string/loginToTwitter"></activity>
+    <activity android:name=".Modify_userData" android:label="@string/modify_userDataTitle" android:windowSoftInputMode="stateHidden|adjustPan" android:configChanges="keyboardHidden|screenLayout|orientation|screenSize"></activity>
+    <activity android:name="org.acra.CrashReportDialog"
+        android:theme="@android:style/Theme.Dialog"
+        android:launchMode="singleInstance"
+        android:excludeFromRecents="true"
+        android:finishOnTaskLaunch="true"> </activity>
+    <!-- Google Map Key -->
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBCXcrPhNdITzq6juIhPMCpqgmTq3n5dyg"/>
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    <activity android:name="com.facebook.LoginActivity"/>
+    <!-- Facebook App ID -->
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id" />
+    </application>
+</manifest>

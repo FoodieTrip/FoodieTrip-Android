@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item 
+        android:id="@+id/modify_object"
+        android:icon="@drawable/ic_action_edit"
+        android:title="@string/menu_modify"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom|withText"/>
+    
+     <item 
+        android:id="@+id/detail_map_interface"
+        android:icon="@drawable/ic_action_map"
+        android:title="@string/menu_mapLocation"
+        android:orderInCategory="2"
+        android:showAsAction="ifRoom|withText"/>
+     
+     <item 
+        android:id="@+id/detail_share"
+        android:title="@string/menu_share"
+        android:orderInCategory="3"
+        android:showAsAction="ifRoom"
+        android:visible="false"
+        android:actionProviderClass="com.actionbarsherlock.widget.ShareActionProvider"/>
+
+</menu>

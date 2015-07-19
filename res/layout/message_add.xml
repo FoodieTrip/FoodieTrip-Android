@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/addMessage_ratingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:text="" 
+        android:visibility="gone"/>
+
+    <RatingBar
+        android:id="@+id/addMessage_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+   <EditText
+       android:id="@+id/addMessage_edittext"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="12dp"
+       android:ems="10"
+       android:lines="3"
+       android:hint="@string/add_aMessage_hint"
+       android:inputType="textMultiLine" >
+
+    </EditText>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       android:orientation="horizontal" >
+
+       <CheckBox
+           android:id="@+id/AddMessage_twitter"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:enabled="false"
+           android:text="@string/Twitter_share" />
+
+       <CheckBox
+           android:id="@+id/AddMessage_facebook"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:enabled="false"
+           android:text="@string/Facebook_share" />
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/AddMessage_okay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alertDialogOkay" />
+
+        <Button
+            android:id="@+id/AddMessage_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alertDialogCancel" />
+
+    </LinearLayout>
+
+</LinearLayout>

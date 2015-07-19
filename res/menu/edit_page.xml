@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/edit_object_save"
+        android:icon="@drawable/ic_action_save"
+        android:menuCategory="system"
+        android:orderInCategory="2"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/menu_save"/>
+    
+    <item
+        android:id="@+id/edit_marker_drag"
+        android:icon="@drawable/ic_action_place"
+        android:menuCategory="system"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/menu_modifyLocation"/>
+
+</menu>
